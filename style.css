@@ -1,0 +1,72 @@
+ @import url("reset.css");
+ /*---------------------------*/
+ 
+ body {
+     font-family: 'Montserrat', sans-serif;
+ }
+ 
+ .container {
+     display: grid;
+     grid-template-columns: repeat(5, 70px);
+     grid-template-rows: 100px repeat(4, 70px);
+     justify-content: center;
+     gap: 10px;
+     margin-top: 20px;
+ }
+ 
+ .display {
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: stretch;
+     background-color: oldlace;
+     grid-column: 1 / span 5;
+     grid-row: 1 / 2;
+ }
+ 
+ .current {
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     padding: 10px;
+ }
+ 
+ #operation {
+     font-size: x-large;
+     flex-grow: 2;
+     border-bottom: 1px solid #ececec;
+ }
+ 
+ #result {
+     font-size: large;
+     flex-grow: 1;
+ }
+ 
+ .box {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: x-large;
+     border-radius: 10px;
+ }
+ 
+ .box:not(#percent):not(#sign):hover {
+     opacity: 0.8;
+     cursor: pointer;
+ }
+ 
+ .box:not(#equal):not(#percent):not(#sign) {
+     background-color: lightskyblue;
+     border: 2px solid black;
+ }
+ 
+ #equal {
+     grid-column: 4/ span 2;
+     background-color: palegreen;
+     border: 2px solid darkolivegreen;
+ }
+ 
+ #percent,
+ #sign {
+     background-color: grey;
+     border: 2px solid black;
+ }
